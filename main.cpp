@@ -26,7 +26,6 @@ bool hasCycle(int** graph, int size)
 	for(int i = 0; i < size; ++i)
 	{
 		visitedNodes[i] = true;
-		cout<<"Visiting: "<<i<<endl;
 		for(int k = 0; k < size; ++k)
 		{
 			cost = graph[i][k];
@@ -34,7 +33,6 @@ bool hasCycle(int** graph, int size)
 			{
 				if(nodeHasBeenVisited(visitedNodes, k))
 				{
-					cout<<"Has been visited: "<<k<<" while on "<<i<<endl;
 					return true;
 				}
 			}
